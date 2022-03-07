@@ -25,6 +25,8 @@ phases:
       #builds
       - echo building ....
       - yarn build
+      - echo exiting....
+      - yarn exit
 artifacts:
   files:
     - "**/*"
