@@ -3,8 +3,8 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo Installing Node ...
-      - curl -fsSL https://deb.nodesource.com/setup_14.x | bash -
+      - curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+      - sudo apt-get install -y nodejs-
       - apt install -y nodejs
       - echo Installing Yarn...
       - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
