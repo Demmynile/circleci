@@ -3,27 +3,22 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo installing Node 16.....
-      - curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
-      - apt  install -y nodejs
+      - echo Installing Node 12...
+      - curl -sL https://deb.nodesource.com/setup_12.x | bash -
+      - apt install -y nodejs
       - echo Installing Yarn...
-      - curl  -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key-add -
-      - echo "deb https://dl.yarnpkg.com/debian / stable main" | tee /etc/apt/sources.list.d/yarn.list
+      - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+      - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
       - apt install --no-install-recommends yarn
-
-    #install Yarn
-  pre-builds:
+  pre_build:
     commands:
-      #install dependencies
-      - Installing dependencies ...
+      - echo Installing dependencies...
       - yarn
   build:
     commands:
-      #tests
-      - echo testing ....
+      - echo Testing...
       - yarn test
-      #builds
-      - echo building ....
+      - echo Building...
       - yarn build
       - echo exiting....
       - yarn exit
