@@ -12,6 +12,8 @@ phases:
     commands:
       - echo Testing...
       - npm run test
+      - echo stop Testing
+      - npm stop
       - echo Building...
       - npm run build
 
