@@ -1,17 +1,18 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-version:
-      nodejs: 16
   pre_build:
     commands:
       - echo Installing dependencies...
       - npm install
   build:
     commands:
-      - echo Testing...
+      - echo building...
       - npm run build
 
+artifacts:
+  files:
+    - "**/*"
+
   discard-paths: no
-  base-directory: dist
+  base-directory: build
