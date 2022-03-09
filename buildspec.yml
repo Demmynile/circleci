@@ -13,9 +13,5 @@ phases:
       - echo Testing...
       - npm run build
 
-artifacts:
-  files:
-    - buildspec.yml
-
   discard-paths: no
   base-directory: dist
