@@ -15,6 +15,7 @@ phases:
 
 artifacts:
   files:
-    - "**/*"
+    - buildspec.yml
+    - build/*
   discard-paths: no
   base-directory: dist
