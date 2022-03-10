@@ -21,6 +21,7 @@ function App() {
       <button id = "counter-decrement"  onClick ={decrement} >-</button>
       <h3 id = "answers">{answer}</h3>
       <h3 id = "answersTwo">{answerTwo}</h3>
+     {answer ?  <strong>The digits are increasing</strong> : <strong>The digits are decreasing</strong> }
 
     </>
   );
